@@ -3,7 +3,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.9.
 
 ## How to Run
-Run `npm install`
+Run `npm install` from the application terminal
 Go to https://rapidapi.com/apidojo/api/yahoo-finance1/ to get a new 'x-rapidapi-key' and 'x-rapidapi-host'.
 Go application folder - src/app/service/shared.service.ts to replace the new 'x-rapidapi-key' and 'x-rapidapi-host'
  

@@ -1,19 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ProductsComponent } from './products/products.component';
-import { SidebarComponent } from './shared/sidebar/sidebar.component';
+import { StocksComponent } from './stocks/stocks.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: SidebarComponent,
-    children: [
-      { path: '', redirectTo: 'products', pathMatch: 'prefix' },
-      {
-        path: 'products',
-        component: ProductsComponent,
-      },
-    ],
+    component: StocksComponent,
   },
 ];
 

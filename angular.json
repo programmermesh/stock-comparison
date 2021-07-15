@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "tariff-comparison": {
+    "stock-comparison": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/tariff-comparison",
+            "outputPath": "dist/stock-comparison",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,14 +28,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
               "node_modules/datatables.net-dt/css/jquery.dataTables.css",
               "node_modules/material-icons/iconfont/material-icons.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.js",
-              "node_modules/datatables.net/js/jquery.dataTables.js",
-              "node_modules/chart.js/dist/Chart.min.js"
+              "node_modules/datatables.net/js/jquery.dataTables.js"
             ]
           },
           "configurations": {
@@ -52,37 +50,25 @@
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
-              "buildOptimizer": true,
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
-                }
-              ]
+              "buildOptimizer": true              
             }
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "tariff-comparison:build"
+            "browserTarget": "stock-comparison:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "tariff-comparison:build:production"
+              "browserTarget": "stock-comparison:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "tariff-comparison:build"
+            "browserTarget": "stock-comparison:build"
           }
         },
         "test": {
@@ -119,16 +105,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "tariff-comparison:serve"
+            "devServerTarget": "stock-comparison:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "tariff-comparison:serve:production"
+              "devServerTarget": "stock-comparison:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "tariff-comparison"
+  "defaultProject": "stock-comparison"
 }

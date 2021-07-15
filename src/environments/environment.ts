@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'http://localhost:3000/products',
+  baseUrl:
+    'https://apidojo-yahoo-finance-v1.p.rapidapi.com/market/v2/get-quotes',
 };
 
 /*

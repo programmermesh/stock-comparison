@@ -1,0 +1,15 @@
+@media screen and (min-width: 640px) {
+  .flex-container {
+    display: flex;
+  }
+}
+main,
+section {
+  margin: 0;
+  padding: 20px;
+  border: 1px solid #000000;
+}
+
+main {
+  background: gray;
+}

@@ -1,0 +1,26 @@
+<section class="content child" [ngStyle]="{'background-color': toggle ? '#2ecc71' : (!toggle ? '#ECF0F1' : null) }">
+    <h3>{{symbol}}</h3>
+    <h5 *ngIf="regularMarketPrice">${{regularMarketPrice}}</h5>
+    <h6>High <br>
+    <em *ngIf="regularMarketDayHigh">${{regularMarketDayHigh}}</em>
+    <em *ngIf="!regularMarketDayHigh">no data</em>
+   </h6>
+     <h6>Low <br>
+     <em *ngIf="regularMarketDayLow">${{regularMarketDayLow}}</em>
+     <em *ngIf="!regularMarketDayLow">no data</em>
+    </h6><br>
+    <h5 *ngIf="mobile">52 Weekly High<br>
+    <em *ngIf="fiftyTwoWeekHigh">${{fiftyTwoWeekHigh}}</em>
+    <em *ngIf="!fiftyTwoWeekHigh">no data</em>
+    <br/><br/>
+   </h5>
+     <h5 *ngIf="mobile">52 Weekly Low<br>
+    <em *ngIf="fiftyTwoWeekLow">${{fiftyTwoWeekLow}}</em>
+    <em *ngIf="!fiftyTwoWeekLow">no data</em>
+    </h5>
+    <br/>
+    <label class="switch">
+        <input type="checkbox" (click)="enableDisableRule()"  checked>
+        <span class="slider round"></span>
+      </label>
+</section>

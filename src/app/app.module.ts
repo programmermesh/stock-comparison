@@ -1,28 +1,21 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SidebarComponent } from './shared/sidebar/sidebar.component';
-import { ProductsComponent } from './products/products.component';
-import { DataTablesModule } from 'angular-datatables';
+import { StocksComponent } from './stocks/stocks.component';
 import { SharedService } from './service/shared.service';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { StockItemComponent } from './stocks/stock-item/stock-item.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    SidebarComponent,
-    ProductsComponent,
-  ],
+  declarations: [AppComponent, StocksComponent, StockItemComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule,
-    FormsModule,
+    FlexLayoutModule,
     HttpClientModule,
-    DataTablesModule,
   ],
   providers: [SharedService],
   bootstrap: [AppComponent],
